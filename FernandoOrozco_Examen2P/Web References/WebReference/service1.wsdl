@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CargaHorarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pelicula" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaHorariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaHorariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaPeliculas">
+        <s:complexType />
+      </s:element>
+      <s:element name="CargaPeliculasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaPeliculasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaDescripcion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pelicula" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaDescripcionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaDescripcionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaPaises">
+        <s:complexType />
+      </s:element>
+      <s:element name="CargaPaisesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaPaisesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaCiudades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Paises" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaCiudadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaCiudadesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ahorcado">
+        <s:complexType />
+      </s:element>
+      <s:element name="AhorcadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AhorcadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cuatro_Imagenes">
+        <s:complexType />
+      </s:element>
+      <s:element name="Cuatro_ImagenesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cuatro_ImagenesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaVentas">
+        <s:complexType />
+      </s:element>
+      <s:element name="CargaVentasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaVentasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Agenda_LoginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_CargaContactos">
+        <s:complexType />
+      </s:element>
+      <s:element name="Agenda_CargaContactosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Agenda_CargaContactosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_DetalleContacto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_DetalleContactoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Agenda_DetalleContactoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_AgregaContacto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="edad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="nacio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_AgregaContactoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Agenda_AgregaContactoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_EditaContacto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="edad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="nacio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_EditaContactoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Agenda_EditaContactoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_BorraContacto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_BorraContactoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Agenda_BorraContactoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agenda_CargaPaises">
+        <s:complexType />
+      </s:element>
+      <s:element name="Agenda_CargaPaisesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Agenda_CargaPaisesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Angel_loginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_Alumno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_AlumnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Angel_AlumnoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_Mensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="grupo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_MensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Angel_MensajesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_Calificaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_CalificacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Angel_CalificacionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_EstadoCuenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_EstadoCuentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Angel_EstadoCuentaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_Tareas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="grupo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Angel_TareasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Angel_TareasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfigIni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfigIniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfigIniResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CargaHorariosSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaHorarios" />
+  </wsdl:message>
+  <wsdl:message name="CargaHorariosSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaHorariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaPeliculasSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaPeliculas" />
+  </wsdl:message>
+  <wsdl:message name="CargaPeliculasSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaPeliculasResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaDescripcionSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaDescripcion" />
+  </wsdl:message>
+  <wsdl:message name="CargaDescripcionSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaDescripcionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaPaisesSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaPaises" />
+  </wsdl:message>
+  <wsdl:message name="CargaPaisesSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaPaisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaCiudadesSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaCiudades" />
+  </wsdl:message>
+  <wsdl:message name="CargaCiudadesSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaCiudadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AhorcadoSoapIn">
+    <wsdl:part name="parameters" element="tns:Ahorcado" />
+  </wsdl:message>
+  <wsdl:message name="AhorcadoSoapOut">
+    <wsdl:part name="parameters" element="tns:AhorcadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Cuatro_ImagenesSoapIn">
+    <wsdl:part name="parameters" element="tns:Cuatro_Imagenes" />
+  </wsdl:message>
+  <wsdl:message name="Cuatro_ImagenesSoapOut">
+    <wsdl:part name="parameters" element="tns:Cuatro_ImagenesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaVentasSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaVentas" />
+  </wsdl:message>
+  <wsdl:message name="CargaVentasSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Agenda_Login" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:Agenda_LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_CargaContactosSoapIn">
+    <wsdl:part name="parameters" element="tns:Agenda_CargaContactos" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_CargaContactosSoapOut">
+    <wsdl:part name="parameters" element="tns:Agenda_CargaContactosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_DetalleContactoSoapIn">
+    <wsdl:part name="parameters" element="tns:Agenda_DetalleContacto" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_DetalleContactoSoapOut">
+    <wsdl:part name="parameters" element="tns:Agenda_DetalleContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_AgregaContactoSoapIn">
+    <wsdl:part name="parameters" element="tns:Agenda_AgregaContacto" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_AgregaContactoSoapOut">
+    <wsdl:part name="parameters" element="tns:Agenda_AgregaContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_EditaContactoSoapIn">
+    <wsdl:part name="parameters" element="tns:Agenda_EditaContacto" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_EditaContactoSoapOut">
+    <wsdl:part name="parameters" element="tns:Agenda_EditaContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_BorraContactoSoapIn">
+    <wsdl:part name="parameters" element="tns:Agenda_BorraContacto" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_BorraContactoSoapOut">
+    <wsdl:part name="parameters" element="tns:Agenda_BorraContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_CargaPaisesSoapIn">
+    <wsdl:part name="parameters" element="tns:Agenda_CargaPaises" />
+  </wsdl:message>
+  <wsdl:message name="Agenda_CargaPaisesSoapOut">
+    <wsdl:part name="parameters" element="tns:Agenda_CargaPaisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Angel_loginSoapIn">
+    <wsdl:part name="parameters" element="tns:Angel_login" />
+  </wsdl:message>
+  <wsdl:message name="Angel_loginSoapOut">
+    <wsdl:part name="parameters" element="tns:Angel_loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Angel_AlumnoSoapIn">
+    <wsdl:part name="parameters" element="tns:Angel_Alumno" />
+  </wsdl:message>
+  <wsdl:message name="Angel_AlumnoSoapOut">
+    <wsdl:part name="parameters" element="tns:Angel_AlumnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Angel_MensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Angel_Mensajes" />
+  </wsdl:message>
+  <wsdl:message name="Angel_MensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Angel_MensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Angel_CalificacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:Angel_Calificaciones" />
+  </wsdl:message>
+  <wsdl:message name="Angel_CalificacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:Angel_CalificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Angel_EstadoCuentaSoapIn">
+    <wsdl:part name="parameters" element="tns:Angel_EstadoCuenta" />
+  </wsdl:message>
+  <wsdl:message name="Angel_EstadoCuentaSoapOut">
+    <wsdl:part name="parameters" element="tns:Angel_EstadoCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Angel_TareasSoapIn">
+    <wsdl:part name="parameters" element="tns:Angel_Tareas" />
+  </wsdl:message>
+  <wsdl:message name="Angel_TareasSoapOut">
+    <wsdl:part name="parameters" element="tns:Angel_TareasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfigIniSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfigIni" />
+  </wsdl:message>
+  <wsdl:message name="ConfigIniSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfigIniResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="CargaHorarios">
+      <wsdl:input message="tns:CargaHorariosSoapIn" />
+      <wsdl:output message="tns:CargaHorariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaPeliculas">
+      <wsdl:input message="tns:CargaPeliculasSoapIn" />
+      <wsdl:output message="tns:CargaPeliculasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaDescripcion">
+      <wsdl:input message="tns:CargaDescripcionSoapIn" />
+      <wsdl:output message="tns:CargaDescripcionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaPaises">
+      <wsdl:input message="tns:CargaPaisesSoapIn" />
+      <wsdl:output message="tns:CargaPaisesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaCiudades">
+      <wsdl:input message="tns:CargaCiudadesSoapIn" />
+      <wsdl:output message="tns:CargaCiudadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ahorcado">
+      <wsdl:input message="tns:AhorcadoSoapIn" />
+      <wsdl:output message="tns:AhorcadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cuatro_Imagenes">
+      <wsdl:input message="tns:Cuatro_ImagenesSoapIn" />
+      <wsdl:output message="tns:Cuatro_ImagenesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaVentas">
+      <wsdl:input message="tns:CargaVentasSoapIn" />
+      <wsdl:output message="tns:CargaVentasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_Login">
+      <wsdl:input message="tns:Agenda_LoginSoapIn" />
+      <wsdl:output message="tns:Agenda_LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_CargaContactos">
+      <wsdl:input message="tns:Agenda_CargaContactosSoapIn" />
+      <wsdl:output message="tns:Agenda_CargaContactosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_DetalleContacto">
+      <wsdl:input message="tns:Agenda_DetalleContactoSoapIn" />
+      <wsdl:output message="tns:Agenda_DetalleContactoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_AgregaContacto">
+      <wsdl:input message="tns:Agenda_AgregaContactoSoapIn" />
+      <wsdl:output message="tns:Agenda_AgregaContactoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_EditaContacto">
+      <wsdl:input message="tns:Agenda_EditaContactoSoapIn" />
+      <wsdl:output message="tns:Agenda_EditaContactoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_BorraContacto">
+      <wsdl:input message="tns:Agenda_BorraContactoSoapIn" />
+      <wsdl:output message="tns:Agenda_BorraContactoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_CargaPaises">
+      <wsdl:input message="tns:Agenda_CargaPaisesSoapIn" />
+      <wsdl:output message="tns:Agenda_CargaPaisesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Angel_login">
+      <wsdl:input message="tns:Angel_loginSoapIn" />
+      <wsdl:output message="tns:Angel_loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Alumno">
+      <wsdl:input message="tns:Angel_AlumnoSoapIn" />
+      <wsdl:output message="tns:Angel_AlumnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Mensajes">
+      <wsdl:input message="tns:Angel_MensajesSoapIn" />
+      <wsdl:output message="tns:Angel_MensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Calificaciones">
+      <wsdl:input message="tns:Angel_CalificacionesSoapIn" />
+      <wsdl:output message="tns:Angel_CalificacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Angel_EstadoCuenta">
+      <wsdl:input message="tns:Angel_EstadoCuentaSoapIn" />
+      <wsdl:output message="tns:Angel_EstadoCuentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Tareas">
+      <wsdl:input message="tns:Angel_TareasSoapIn" />
+      <wsdl:output message="tns:Angel_TareasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfigIni">
+      <wsdl:input message="tns:ConfigIniSoapIn" />
+      <wsdl:output message="tns:ConfigIniSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CargaHorarios">
+      <soap:operation soapAction="http://tempuri.org/CargaHorarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaPeliculas">
+      <soap:operation soapAction="http://tempuri.org/CargaPeliculas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaDescripcion">
+      <soap:operation soapAction="http://tempuri.org/CargaDescripcion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaPaises">
+      <soap:operation soapAction="http://tempuri.org/CargaPaises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaCiudades">
+      <soap:operation soapAction="http://tempuri.org/CargaCiudades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ahorcado">
+      <soap:operation soapAction="http://tempuri.org/Ahorcado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cuatro_Imagenes">
+      <soap:operation soapAction="http://tempuri.org/Cuatro_Imagenes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaVentas">
+      <soap:operation soapAction="http://tempuri.org/CargaVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_Login">
+      <soap:operation soapAction="http://tempuri.org/Agenda_Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_CargaContactos">
+      <soap:operation soapAction="http://tempuri.org/Agenda_CargaContactos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_DetalleContacto">
+      <soap:operation soapAction="http://tempuri.org/Agenda_DetalleContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_AgregaContacto">
+      <soap:operation soapAction="http://tempuri.org/Agenda_AgregaContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_EditaContacto">
+      <soap:operation soapAction="http://tempuri.org/Agenda_EditaContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_BorraContacto">
+      <soap:operation soapAction="http://tempuri.org/Agenda_BorraContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_CargaPaises">
+      <soap:operation soapAction="http://tempuri.org/Agenda_CargaPaises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_login">
+      <soap:operation soapAction="http://tempuri.org/Angel_login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Alumno">
+      <soap:operation soapAction="http://tempuri.org/Angel_Alumno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Mensajes">
+      <soap:operation soapAction="http://tempuri.org/Angel_Mensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Calificaciones">
+      <soap:operation soapAction="http://tempuri.org/Angel_Calificaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_EstadoCuenta">
+      <soap:operation soapAction="http://tempuri.org/Angel_EstadoCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Tareas">
+      <soap:operation soapAction="http://tempuri.org/Angel_Tareas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfigIni">
+      <soap:operation soapAction="http://tempuri.org/ConfigIni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CargaHorarios">
+      <soap12:operation soapAction="http://tempuri.org/CargaHorarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaPeliculas">
+      <soap12:operation soapAction="http://tempuri.org/CargaPeliculas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaDescripcion">
+      <soap12:operation soapAction="http://tempuri.org/CargaDescripcion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaPaises">
+      <soap12:operation soapAction="http://tempuri.org/CargaPaises" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaCiudades">
+      <soap12:operation soapAction="http://tempuri.org/CargaCiudades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ahorcado">
+      <soap12:operation soapAction="http://tempuri.org/Ahorcado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cuatro_Imagenes">
+      <soap12:operation soapAction="http://tempuri.org/Cuatro_Imagenes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaVentas">
+      <soap12:operation soapAction="http://tempuri.org/CargaVentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_Login">
+      <soap12:operation soapAction="http://tempuri.org/Agenda_Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_CargaContactos">
+      <soap12:operation soapAction="http://tempuri.org/Agenda_CargaContactos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_DetalleContacto">
+      <soap12:operation soapAction="http://tempuri.org/Agenda_DetalleContacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_AgregaContacto">
+      <soap12:operation soapAction="http://tempuri.org/Agenda_AgregaContacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_EditaContacto">
+      <soap12:operation soapAction="http://tempuri.org/Agenda_EditaContacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_BorraContacto">
+      <soap12:operation soapAction="http://tempuri.org/Agenda_BorraContacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_CargaPaises">
+      <soap12:operation soapAction="http://tempuri.org/Agenda_CargaPaises" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_login">
+      <soap12:operation soapAction="http://tempuri.org/Angel_login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Alumno">
+      <soap12:operation soapAction="http://tempuri.org/Angel_Alumno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Mensajes">
+      <soap12:operation soapAction="http://tempuri.org/Angel_Mensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Calificaciones">
+      <soap12:operation soapAction="http://tempuri.org/Angel_Calificaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_EstadoCuenta">
+      <soap12:operation soapAction="http://tempuri.org/Angel_EstadoCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Angel_Tareas">
+      <soap12:operation soapAction="http://tempuri.org/Angel_Tareas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfigIni">
+      <soap12:operation soapAction="http://tempuri.org/ConfigIni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://201.168.154.186/webservices/wspruebas/service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://201.168.154.186/webservices/wspruebas/service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
